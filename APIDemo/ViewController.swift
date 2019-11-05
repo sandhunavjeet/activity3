@@ -90,19 +90,18 @@ class ViewController: UIViewController {
             //let sunriseTime = jsonResponse["results"]["sunrise"].string
             //let sunsetTime = jsonResponse["results"]["sunset"].string
             
-            let sunriseTime = jsonResponse["currently"]["dewPoint"]
+            let sunriseTime = jsonResponse["currently"]["time"]
             //let sunsetTime = jsonResponse["results"]["sunset"].string
             //let sunsetTime = jsonResponse["list"][0]["main"]["temp_max"]
-            let sunsetTime = jsonResponse["currently"]["apparentTemperature"]
+           
             
             
             // DEBUG:  Output it to the terminal
             print("Max: \(sunriseTime)")
-            print("Min: \(sunsetTime)")
-            
+           
             // display in a UI
             self.sunriseLabel.text = "\(sunriseTime)"
-            self.sunsetLabel.text = "\(sunsetTime)"
+           
         }
         
         
